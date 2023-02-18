@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change_color_Element</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box" id="box"></div>
+    <button id="change_color"> ChangeColor</button>
+    <button id="adding" onclick="add()">AddChild</button>
+    <button id="removing">Removechild</button>
+
+    <script>
+        let arr = ["green", "red", "pink", "yellow", "blue"];
+
+        let box = document.getElementById("box");
+        let change = document.getElementById("change_color")
+        let adding = document.getElementById("adding");
+        let removing = document.getElementById("removing");
+        change.addEventListener("click", function () {
+            let random = arr[Math.floor(Math.random() * arr.length)]
+            box.style.background = random;
+        })
+        let element;
+         function add () {
+            element = document.createElement("div");
+          element.style.cssText = "width:100px;height:100px;background:green";
+        
+            box.appendChild(element)
+         }   
+        removing.addEventListener("click", function () {
+           
+            box.removeChild(element);
+        })
+    </script>
+</body>
+
+</html>

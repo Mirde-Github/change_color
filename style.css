@@ -1,0 +1,7 @@
+.box{
+    background-color: blueviolet;
+    width: 50%;
+    height: 50vh;
+    border: 2px solid black;
+    margin: 20px;
+}
